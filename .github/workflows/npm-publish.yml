@@ -4,8 +4,7 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [push, workflow_dispatch]
+  [push, workflow_dispatch]
 
 jobs:
   build:
@@ -16,4 +15,5 @@ jobs:
         with:
           node-version: 20
       - run: npm run lint
-      - run: npm test
+      - run: npm run build
+      - run: npm run test
